@@ -1,0 +1,15 @@
+at ./manage.py
+python -m venv .venv
+source ./.venv/Script/activate
+django-admin startproject project-name .
+django-admin startapp app-name
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+python manage.py runserver
+python manage.py createsuperuser
+# python -c "import secrets; print(secrets.token_urlsafe())" 
+# python -m pip install whitenoise==5.3.0
+# python -m pip install gunicorn==20.1.0
+python -m pip freeze > requirements.txt
+gunicorn django_project.wsgi --log-file
