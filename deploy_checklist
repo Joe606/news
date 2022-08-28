@@ -1,0 +1,12 @@
+• install Gunicorn
+• create a requirements.txt file
+• update ALLOWED_HOSTS in django_project/settings.py
+• create a Procfile file
+• create a runtime.txt file
+• configure static files, install whitenoise, and run collectstatic
+• create and update a .gitignore file
+• create a new Heroku project, push the code to it, and start a dyno web process
+
+• DEBUG set to False
+• SECRET_KEY actually kept secret
+• a production database, not SQLite
