@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #local apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -113,7 +114,8 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'America-New_York'
 
 USE_I18N = True
 
@@ -137,3 +139,15 @@ LOGOUT_REDIRECT_URL = 'home'
 #accounts sign up
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+#password change and reset
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #output email to the console
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'      #output email for real using SMTP
+DEFAULT_FROM_EMAIL = 'x@x.com'
+EMAIL_HOST = 'smtp.mail.x.com'
+EMAIL_PORT = 587                       # 465
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'x@x.com'
+EMAIL_HOST_PASSWORD = 'prsjuiporliggspj'
+
